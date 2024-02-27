@@ -1,6 +1,8 @@
 import React from "react";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import SectionTitle from "./shared/SectionTitle";
+import Title from "./shared/SectionTitle";
+import Link from "next/link";
+import Image from "next/image";
 
 interface IProps {}
 
@@ -36,7 +38,7 @@ export default function ServicesSection({}: IProps) {
     <section className="my-10">
       <MaxWidthWrapper>
         <div className="sec-title text-center pt-14">
-          <SectionTitle title="ماذا تقدم منصة اكاديمية إياد.كوم؟" />
+          <Title textSize="large" title="ماذا تقدم منصة اكاديمية إياد.كوم؟" />
         </div>
         <div className="flex flex-wrap justify-center mt-14">
           {services.map((service) => (
@@ -46,7 +48,9 @@ export default function ServicesSection({}: IProps) {
             >
               <div className="p-4 bg-white rounded-lg shadow">
                 <div className="mb-4">
-                  <img
+                  <Image
+                    width="420"
+                    height="375"
                     className="w-full"
                     src={service.imageSrc}
                     alt={service.title}
@@ -57,14 +61,14 @@ export default function ServicesSection({}: IProps) {
                   <p className="mb-4 text-secondry text-xs md:text-sm">
                     {service.description}
                   </p>
-                  <a
+                  <Link
                     href={service.link}
                     target="_blank"
                     className="hover:bg-transparent hover:text-green-500 inline-flex items-center px-10 py-2 text-lg font-bold text-white transition-colors bg-green-500 border border-green-500 rounded"
                   >
                     ابدأ الآن
                     <i className="fa fa-arrow-left ml-2" aria-hidden="true"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
+import Link from "next/link";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -33,28 +35,31 @@ const HeroSection = () => {
                       </p>
                       <div className="md:justify-normal flex flex-wrap items-center justify-center gap-2 mt-4 text-center">
                         <div className=" md:inline-flex items-center justify-center hidden gap-2 font-bold">
-                          <a href="" className=" gap-2 text-2xl">
+                          <Link href="" className=" gap-2 text-2xl">
                             الفيديو التعريفي
-                          </a>
-                          <img
+                          </Link>
+                          <Image
+                            width="30"
+                            height="30"
                             className="lazyload ml-2"
                             src="/images/hero-play.png"
                             alt="image"
                           />
                         </div>
-                        <a
-                          href="https://api.whatsapp.com/send?phone=971509959271"
+                        <Link
+                          href="https://api.whatsapp.com/send?phone=01009261036"
                           target="_blank"
                           className="hover:bg-transparent hover:text-black md:w-auto inline-block w-full px-4 py-2 text-xl font-bold text-white duration-150 bg-green-700 border border-green-700 rounded"
                         >
                           احجز درسك الآن
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="md:w-1/2 w-full p-4">
                       <div>
-                        <img
-                          className="lazyload"
+                        <Image
+                          width="665"
+                          height="565"
                           src="/images/hero-1.webp"
                           alt="image"
                         />

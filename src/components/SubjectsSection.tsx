@@ -1,5 +1,7 @@
+import Link from "next/link";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import SectionTitle from "./shared/SectionTitle";
+import Title from "./shared/SectionTitle";
+import Image from "next/image";
 
 const SubjectsComponent = () => {
   // subjectsData.js
@@ -66,21 +68,29 @@ const SubjectsComponent = () => {
   return (
     <section className="bg-custom-gradient p-5">
       <MaxWidthWrapper>
-        <div className="py-20">
-          <SectionTitle title="إختر من بين جميع المواد التي تقدمها اكاديمية اياد.كوم" />
+        <div className="py-20 text-center">
+          <Title
+            textSize="large"
+            title="إختر من بين جميع المواد التي تقدمها اكاديمية اياد.كوم"
+          />
           <ul className="md:grid-cols-4 mt-14 grid grid-cols-2 gap-8">
             {subjects.map((subject, index) => (
               <li
                 key={subject.id}
                 className="p-4 rgb(248, 248, 248); bg-white hover:bg-[#eaf3ed]  border hover:border-green-600 transition-colors rounded-2xl box-shadow: 0px 0px 3px 2px"
               >
-                <a
+                <Link
                   href={subject.href}
                   className="flex flex-col items-center justify-center gap-4"
                 >
-                  <img src={subject.imgSrc} alt={subject.altText} />
+                  <Image
+                    width="50"
+                    height="50"
+                    src={subject.imgSrc}
+                    alt={subject.altText}
+                  />
                   <p className="text-xl text-center">{subject.name}</p>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

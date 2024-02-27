@@ -14,8 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-careem">{children}</body>
-      <Footer />
+      <body className="font-careem">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

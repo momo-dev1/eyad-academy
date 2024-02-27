@@ -1,5 +1,7 @@
+import Link from "next/link";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import SectionTitle from "./shared/SectionTitle";
+import Title from "./shared/SectionTitle";
+import Image from "next/image";
 
 const LearningHome = () => {
   const courseFeatures = [
@@ -22,7 +24,7 @@ const LearningHome = () => {
     <section className="py-20 bg-white">
       <MaxWidthWrapper>
         <header className="mb-8 text-center">
-          <SectionTitle title="تعلم مع اكاديمية اياد.كوم" />
+          <Title textSize="large" title="تعلم مع اكاديمية اياد.كوم" />
           <p className="sm:text-lg mt-5 text-base">
             وكن من طلابنا الذين ساعدناهم لتحقيق التفوق والالتحاق بالجامعات
             المرموقة
@@ -43,20 +45,25 @@ const LearningHome = () => {
                 <p className="text-base">{feature.description}</p>
               </div>
               <div className="md:w-1/2 md:mt-0  mt-4">
-                <img src={feature.imgSrc} alt={feature.imgAlt} />
+                <Image
+                  width="715"
+                  height="465"
+                  src={feature.imgSrc}
+                  alt={feature.imgAlt}
+                />
               </div>
             </li>
           ))}
         </ul>
         <div className="mt-8 text-center">
-          <a
+          <Link
             href=""
             target="_blank"
             className="hover:bg-transparent hover:text-green-500 inline-flex items-center px-10 py-2 text-lg font-bold text-white transition-colors bg-green-500 border border-green-500 rounded"
           >
             احجز درسك الآن
             <i className="fa fa-arrow-left ml-2" aria-hidden="true"></i>
-          </a>
+          </Link>
         </div>
       </MaxWidthWrapper>
     </section>

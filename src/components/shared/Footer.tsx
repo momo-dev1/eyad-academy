@@ -5,6 +5,9 @@ import {
   FaInstagramSquare,
   FaWhatsappSquare,
 } from "react-icons/fa";
+import Title from "./SectionTitle";
+import Image from "next/image";
+import Link from "next/link";
 
 const sections = [
   {
@@ -65,6 +68,7 @@ const socialMedia = [
     href: "",
   },
 ];
+
 const Footer = () => {
   return (
     <footer dir="rtl" className="bg-[#f8f8f8] text-right p-5">
@@ -72,7 +76,7 @@ const Footer = () => {
         <div className="md:grid-cols-2  grid grid-cols-1 gap-5 mb-4">
           {/* Logo and Description */}
           <div>
-            <img src="/images/logo.png" alt="logo" className="ml-auto" />
+            <Image width="425" height="100" src="/images/logo.png" alt="logo" />
             <p className="mt-3 text-secondry  md:max-w-sm">
               موقع اكاديمية إياد.كوم هو منصة افتراضية متخصصة في تدريس مناهج الـ
               IG في جمهورية مصر العربية.
@@ -83,13 +87,11 @@ const Footer = () => {
             {/* Dynamic Sections */}
             {sections.map((section, index) => (
               <div key={index} className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold">
-                  {section.title}
-                </h3>
+                <Title textSize="small" title={section.title} />
                 <ul className="mt-4 text-[16px] md:text-lg text-secondry">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <a href={link.href}>{link.text}</a>
+                      <Link href={link.href}>{link.text}</Link>
                     </li>
                   ))}
                 </ul>
@@ -100,12 +102,10 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col gap-5 md:gap-10 md:items-baseline">
           {/* Social Media Links */}
           <div className=" pt-2">
-            <h3 className="text-xl md:text-2xl font-bold">
-              تابع اكاديمية إياد.كوم
-            </h3>
+            <Title textSize="small" title="تابع اكاديمية إياد.كوم" />
             <div className="flex gap-3 md:justify-center mt-4">
               {socialMedia.map((media, mediaIndex) => (
-                <a
+                <Link
                   className="text-3xl text-green-600"
                   key={mediaIndex}
                   href={media.href}
@@ -113,7 +113,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   {media.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -121,11 +121,11 @@ const Footer = () => {
           {/* Dynamic Sections */}
           {help.map((section, index) => (
             <div key={index} className="flex-1">
-              <h3 className="text-xl md:text-2xl font-bold">{section.title}</h3>
+              <Title textSize="small" title={section.title} />
               <ul className="mt-4 text-[16px] md:text-lg text-secondry">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href={link.href}>{link.text}</a>
+                    <Link href={link.href}>{link.text}</Link>
                   </li>
                 ))}
               </ul>
@@ -143,12 +143,10 @@ const Footer = () => {
             <div>
               <ul className="flex gap-4">
                 <li>
-                  <a href="https://elmadrasah.com/policies/privacy-policy">
-                    سياسة الخصوصية
-                  </a>
+                  <Link href="privacy-policy">سياسة الخصوصية</Link>
                 </li>
                 <li>
-                  <a href="#">شروط الاستخدام</a>
+                  <Link href="#">شروط الاستخدام</Link>
                 </li>
               </ul>
             </div>
