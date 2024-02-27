@@ -9,12 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern": "url('/images/pattern.png')",
+        'custom-gradient': 'linear-gradient(#fdfbfb, #e3e3e3)',
       },
+      boxShadow: {
+        'custom': '0 0 3px 2px #f8f8f8',
+      },
+      fontFamily: {
+        careem: ['Careem', 'sans-serif'],
+      },
+      colors: {
+        secondry: "#748078"
+      }
     },
   },
   plugins: [],
 };
 export default config;
+
+
