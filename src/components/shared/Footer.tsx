@@ -90,7 +90,11 @@ const Footer = () => {
             {/* Dynamic Sections */}
             {sections.map((section, index) => (
               <div key={index} className="flex-1">
-                <Title textSize="small" title={section.title} />
+                <Title
+                  textSize="small"
+                  title={section.title}
+                  underline="underlines"
+                />
                 <ul className="mt-4 text-[16px] md:text-lg text-secondry">
                   {section.links.map((link, linkIndex) => (
                     <li
@@ -108,7 +112,11 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col gap-5 md:gap-10 md:items-baseline">
           {/* Social Media Links */}
           <div className=" pt-2">
-            <Title textSize="small" title="تابع اكاديمية إياد.كوم" />
+            <Title
+              textSize="small"
+              title="تابع اكاديمية إياد.كوم"
+              underline="underlines"
+            />
             <div className="flex gap-3 md:justify-center mt-4">
               {socialMedia.map((media, mediaIndex) => (
                 <Link
@@ -127,12 +135,16 @@ const Footer = () => {
           {/* Dynamic Sections */}
           {help.map((section, index) => (
             <div key={index} className="flex-1">
-              <Title textSize="small" title={section.title} />
+              <Title
+                textSize="small"
+                title={section.title}
+                underline="underlines"
+              />
               <ul className="mt-4 text-[16px] md:text-lg text-secondry ">
                 {section.links.map((link, linkIndex) => (
                   <li
                     key={linkIndex}
-                    className="hover:text-[#ffbe58] duration-300"
+                    className="hover:text-[#ffbe58] duration-300 "
                   >
                     <Link href={link.href}>{link.text}</Link>
                   </li>
