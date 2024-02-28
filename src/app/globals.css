@@ -40,3 +40,11 @@ h1::before {
   left: 0;
   bottom: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  h1::before {
+    width: 50%;
+    right: 0;
+    bottom: 0;
+  }
+}
