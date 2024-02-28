@@ -20,7 +20,7 @@ const HeroSection = () => {
                       <h3 className="text-lg font-semibold text-[#1c8a44]">
                         مرحباً بك في منصة اكاديمية إياد.كوم
                       </h3>
-                      <h1 className=" before-example relative text-2xl md:leading-[3rem] md:text-3xl font-bold ">
+                      <h1 className="relative text-2xl md:leading-[3rem] md:text-3xl font-bold py-6">
                         أفضل منصة تعليمية مصرية متخصصة في دورات المناهج الدولية
                         IG
                       </h1>

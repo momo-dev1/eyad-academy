@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./shared/Button";
-import MaxWidthWrapper from "./shared/MaxWidthWrapper";
+import { FaPlayCircle } from "react-icons/fa";
 import Link from "next/link";
 
 interface Feature {
@@ -45,32 +45,32 @@ const VideoLinks = [
   {
     id: 1,
     href: "https://www.youtube.com/watch?v=OzaTtKMMIbs",
-    src: "//elmadrasah.com/cdn/shop/t/55/assets/home-video-img1.png?v=13765260325717734271689248076",
+    src: "/images/holder.jpg",
     alt: "image 1",
   },
   {
     id: 2,
     href: "https://www.youtube.com/watch?v=8ySwA80U73I&t=7s",
-    src: "//elmadrasah.com/cdn/shop/t/55/assets/home-video-img2.png?v=46813088659956616591689248081",
+    src: "/images/holder.jpg",
     alt: "image 2",
   },
   {
     id: 3,
     href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
-    src: "//elmadrasah.com/cdn/shop/t/55/assets/home-video-img3.png?v=83794269519233162461689248079",
+    src: "/images/holder.jpg",
     alt: "image 3",
   },
   {
-    id: 3,
+    id: 4,
     href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
-    src: "//elmadrasah.com/cdn/shop/t/55/assets/home-video-img3.png?v=83794269519233162461689248079",
-    alt: "image 3",
+    src: "/images/holder.jpg",
+    alt: "image 4",
   },
   {
-    id: 3,
+    id: 5,
     href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
-    src: "//elmadrasah.com/cdn/shop/t/55/assets/home-video-img3.png?v=83794269519233162461689248079",
-    alt: "image 3",
+    src: "/images/holder.jpg",
+    alt: "image 5",
   },
 
   // Add more items as needed
@@ -120,8 +120,10 @@ const FeatureSection = () => {
         <div className="mt-5">
           <div className="group relative mb-4 overflow-hidden border border-green-600 rounded-lg">
             <Link href="">
-              <img
-                src="//elmadrasah.com/cdn/shop/t/55/assets/new-banner-collections.jpg?v=178630390166765675011698840774"
+              <Image
+                width={960}
+                height={540}
+                src="/images/features/feature-vid.png"
                 alt="Main video"
                 className="w-full h-auto"
               />
@@ -136,16 +138,22 @@ const FeatureSection = () => {
               />
             </div>
           </div>
-          <ul className="flex flex-1">
+          <ul className="flex flex-1 gap-1 ">
             {VideoLinks.map((video) => (
-              <li key={video.id} className=" p-1">
-                <a href={video.href}>
-                  <img
+              <li
+                key={video.id}
+                className="relative overflow-hidden border border-green-600 rounded-lg group"
+              >
+                <Link href={video.href}>
+                  <Image
+                    width={65}
+                    height={65}
                     src={video.src}
                     alt={video.alt}
-                    className="w-full h-auto"
+                    className="w-full h-auto opacity-50"
                   />
-                </a>
+                </Link>
+                <FaPlayCircle className="top-1/2 left-1/2 absolute text-2xl transform -translate-x-1/2 -translate-y-1/2 text-gray-700 opacity-75 group-hover:scale-90 duration-300" />
               </li>
             ))}
           </ul>

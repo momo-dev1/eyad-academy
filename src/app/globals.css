@@ -28,4 +28,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
+h1::before {
+  position: absolute;
+  content: "";
+  background-image: url("/images/home-pattern.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  height: 24px;
+  left: 0;
+  bottom: 0;
+}
