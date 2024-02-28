@@ -27,8 +27,5 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-@layer {
-  .before-example::before {
-    @apply absolute bg-no-repeat bg-contain bg-left w-full h-[24px] left-0 bottom-0;
-  }
-}
+
+

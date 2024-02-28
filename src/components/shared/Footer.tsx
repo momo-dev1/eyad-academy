@@ -49,23 +49,26 @@ const socialMedia = [
   {
     name: "Facebook",
     icon: <FaFacebook />,
-
-    href: "",
+    href: "https://facebook.com",
+    color: "text-blue-600 hover:text-blue-400",
   },
   {
     name: "Twitter",
     icon: <FaTwitter />,
-    href: "",
+    href: "https://twitter.com",
+    color: "text-blue-400 hover:text-blue-200",
   },
   {
     name: "Instagram",
     icon: <FaInstagramSquare />,
-    href: "",
+    href: "https://instagram.com",
+    color: "text-pink-600 hover:text-pink-400",
   },
   {
-    name: "Whatsapp ",
+    name: "Whatsapp",
     icon: <FaWhatsappSquare />,
-    href: "",
+    href: "https://whatsapp.com",
+    color: "text-green-500 hover:text-green-300",
   },
 ];
 
@@ -90,7 +93,10 @@ const Footer = () => {
                 <Title textSize="small" title={section.title} />
                 <ul className="mt-4 text-[16px] md:text-lg text-secondry">
                   {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
+                    <li
+                      key={linkIndex}
+                      className="hover:text-[#ffbe58] duration-300"
+                    >
                       <Link href={link.href}>{link.text}</Link>
                     </li>
                   ))}
@@ -106,7 +112,7 @@ const Footer = () => {
             <div className="flex gap-3 md:justify-center mt-4">
               {socialMedia.map((media, mediaIndex) => (
                 <Link
-                  className="text-3xl text-green-600"
+                  className={`text-3xl ${media.color} duration-300`}
                   key={mediaIndex}
                   href={media.href}
                   target="_blank"
@@ -122,9 +128,12 @@ const Footer = () => {
           {help.map((section, index) => (
             <div key={index} className="flex-1">
               <Title textSize="small" title={section.title} />
-              <ul className="mt-4 text-[16px] md:text-lg text-secondry">
+              <ul className="mt-4 text-[16px] md:text-lg text-secondry ">
                 {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
+                  <li
+                    key={linkIndex}
+                    className="hover:text-[#ffbe58] duration-300"
+                  >
                     <Link href={link.href}>{link.text}</Link>
                   </li>
                 ))}
@@ -141,11 +150,11 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <ul className="flex gap-4">
-                <li>
+              <ul className="flex gap-4 ">
+                <li className="hover:text-[#ffbe58] duration-300">
                   <Link href="privacy-policy">سياسة الخصوصية</Link>
                 </li>
-                <li>
+                <li className="hover:text-[#ffbe58] duration-300">
                   <Link href="#">شروط الاستخدام</Link>
                 </li>
               </ul>

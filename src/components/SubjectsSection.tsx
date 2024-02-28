@@ -9,7 +9,7 @@ const SubjectsComponent = () => {
     {
       id: 1,
       href: "",
-      imgSrc: "/images/subjects/chemistry.webp",
+      imgSrc: "/images/subjects/math.png",
       altText: "image",
       name: "الرياضيـات",
     },

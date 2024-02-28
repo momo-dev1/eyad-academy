@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="home-slide-view bg-[#f8f8f8] pt-20 ">
+    <section className="bg-custom-gradient pt-20 md:pt-24 ">
       <MaxWidthWrapper>
         {/* <!-- Slider main container --> */}
         <div dir="rtl" className="slide-container">
@@ -20,11 +20,11 @@ const HeroSection = () => {
                       <h3 className="text-lg font-semibold text-[#1c8a44]">
                         مرحباً بك في منصة اكاديمية إياد.كوم
                       </h3>
-                      <h1 className="bg-hero-pattern relative text-2xl md:text-3xl font-bold">
+                      <h1 className=" before-example relative text-2xl md:leading-[3rem] md:text-3xl font-bold ">
                         أفضل منصة تعليمية مصرية متخصصة في دورات المناهج الدولية
                         IG
                       </h1>
-                      <p className="my-4 text-secondry text-sm md:text-base">
+                      <p className="text-secondry md:text-base  my-4 text-sm">
                         نحن الرائدون في مجال التعليم الإلكتروني بالوطن العربي،
                         مقدمين دورات شاملة لجميع الفئات العمرية. منصتنا تتخصص في
                         تقديم دورات تعليمية متعددة الأنماط تغطي مناهج الشهادة

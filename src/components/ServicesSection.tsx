@@ -1,8 +1,10 @@
 import React from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
 import Title from "./shared/SectionTitle";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "./shared/Button";
 
 interface IProps {}
 
@@ -61,14 +63,14 @@ export default function ServicesSection({}: IProps) {
                   <p className="mb-4 text-secondry text-xs md:text-sm">
                     {service.description}
                   </p>
-                  <Link
+                  <Button
                     href={service.link}
-                    target="_blank"
-                    className="hover:bg-transparent hover:text-green-500 inline-flex items-center px-10 py-2 text-lg font-bold text-white transition-colors bg-green-500 border border-green-500 rounded"
+                    variant="minimal"
+                    className="inline-flex justify-center gap-2 hover:text-green-700"
                   >
-                    ابدأ الآن
+                    <FaArrowLeft className="text-lg mt-2" /> ابدأ الآن
                     <i className="fa fa-arrow-left ml-2" aria-hidden="true"></i>
-                  </Link>
+                  </Button>
                 </div>
               </div>
             </div>

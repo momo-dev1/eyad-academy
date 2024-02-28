@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('/images/pattern.png')",
-        'custom-gradient': 'linear-gradient(#fdfbfb, #e3e3e3)',
+        "hero-pattern": "url('/images/home-pattern.png')",
+        'custom-gradient': 'linear-gradient(#fdfbfb, #f8f8f8)',
       },
       boxShadow: {
         'custom': '0 0 3px 2px #f8f8f8',
@@ -19,7 +19,8 @@ const config: Config = {
         careem: ['Careem', 'sans-serif'],
       },
       colors: {
-        secondry: "#748078"
+        secondry: "#748078",
+        nav: "#F8F8F8"
       }
     },
   },

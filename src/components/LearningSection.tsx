@@ -2,6 +2,7 @@ import Link from "next/link";
 import MaxWidthWrapper from "./shared/MaxWidthWrapper";
 import Title from "./shared/SectionTitle";
 import Image from "next/image";
+import Button from "./shared/Button";
 
 const LearningHome = () => {
   const courseFeatures = [
@@ -56,14 +57,10 @@ const LearningHome = () => {
           ))}
         </ul>
         <div className="mt-8 text-center">
-          <Link
-            href=""
-            target="_blank"
-            className="hover:bg-transparent hover:text-green-500 inline-flex items-center px-10 py-2 text-lg font-bold text-white transition-colors bg-green-500 border border-green-500 rounded"
-          >
+          <Button href="" variant="minimal">
             احجز درسك الآن
             <i className="fa fa-arrow-left ml-2" aria-hidden="true"></i>
-          </Link>
+          </Button>
         </div>
       </MaxWidthWrapper>
     </section>
