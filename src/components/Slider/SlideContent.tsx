@@ -40,7 +40,7 @@ const SlideContent = ({
         </div>
       </div>
       <div className="md:w-1/2 w-full p-4">
-        <Image width="665" height="565" src={imageSrc} alt="image" />
+        <Image width="665" height="565" src={imageSrc} alt="image" priority />
       </div>
     </div>
   </div>
