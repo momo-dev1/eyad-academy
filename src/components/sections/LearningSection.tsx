@@ -1,8 +1,8 @@
 import Link from "next/link";
-import MaxWidthWrapper from "./shared/MaxWidthWrapper";
-import Title from "./shared/SectionTitle";
+import MaxWidthWrapper from "../shared/MaxWidthWrapper";
+import Title from "../shared/SectionTitle";
 import Image from "next/image";
-import Button from "./shared/Button";
+import Button from "../shared/Button";
 
 const LearningHome = () => {
   const courseFeatures = [

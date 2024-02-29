@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./shared/Button";
+import Button from "../shared/Button";
 import { FaPlayCircle } from "react-icons/fa";
 import Link from "next/link";
 

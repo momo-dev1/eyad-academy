@@ -1,76 +1,8 @@
+import { helpData, sectionsData, socialMedia } from "@/utils/data";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagramSquare,
-  FaWhatsappSquare,
-} from "react-icons/fa";
 import Title from "./SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
-
-const sections = [
-  {
-    title: "تعرف علينا",
-    links: [
-      {
-        text: "عن اكاديمية إياد.كوم",
-        href: "",
-      },
-      { text: "تواصل معنا", href: "" },
-      { text: "سياسة الاسترجاع", href: "" },
-    ],
-  },
-  {
-    title: "أقسام الموقع",
-    links: [
-      { text: "الدورات", href: "" },
-      { text: "الاستشارات", href: "" },
-      { text: "الأسئلة الشائعة", href: "" },
-    ],
-  },
-];
-
-const help = [
-  {
-    title: "المساعدة",
-    links: [
-      { text: "جمهورية مصر العربية", href: "" },
-      {
-        text: "WhatsApp: +123 456 789",
-        href: "",
-      },
-      { text: "Email : teacher@eyad-academy.com", href: "" },
-    ],
-  },
-];
-
-const socialMedia = [
-  {
-    name: "Facebook",
-    icon: <FaFacebook />,
-    href: "https://facebook.com",
-    color: "text-blue-600 hover:text-blue-400",
-  },
-  {
-    name: "Twitter",
-    icon: <FaTwitter />,
-    href: "https://twitter.com",
-    color: "text-blue-400 hover:text-blue-200",
-  },
-  {
-    name: "Instagram",
-    icon: <FaInstagramSquare />,
-    href: "https://instagram.com",
-    color: "text-pink-600 hover:text-pink-400",
-  },
-  {
-    name: "Whatsapp",
-    icon: <FaWhatsappSquare />,
-    href: "https://whatsapp.com",
-    color: "text-green-500 hover:text-green-300",
-  },
-];
 
 const Footer = () => {
   return (
@@ -88,7 +20,7 @@ const Footer = () => {
 
           <div className="flex gap-5 pt-1">
             {/* Dynamic Sections */}
-            {sections.map((section, index) => (
+            {sectionsData.map((section, index) => (
               <div key={index} className="flex-1">
                 <Title
                   textSize="small"
@@ -120,7 +52,15 @@ const Footer = () => {
             <div className="flex gap-3 md:justify-center mt-4">
               {socialMedia.map((media, mediaIndex) => (
                 <Link
-                  className={`text-3xl ${media.color} duration-300`}
+                  className={`text-3xl ${
+                    media.color === "blue"
+                      ? "text-blue-600 hover:text-blue-400"
+                      : media.color === "sky"
+                      ? "text-blue-400 hover:text-blue-200"
+                      : media.color === "pink"
+                      ? "text-pink-600 hover:text-pink-400"
+                      : "text-green-500 hover:text-green-300"
+                  } duration-300`}
                   key={mediaIndex}
                   href={media.href}
                   target="_blank"
@@ -133,7 +73,7 @@ const Footer = () => {
           </div>
 
           {/* Dynamic Sections */}
-          {help.map((section, index) => (
+          {helpData.map((section, index) => (
             <div key={index} className="flex-1">
               <Title
                 textSize="small"

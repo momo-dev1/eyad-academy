@@ -1,9 +1,9 @@
-import HeroSection from "@/components/HeroSection";
-import CounterSection from "@/components/CounterSection";
-import ServicesSection from "@/components/ServicesSection";
-import SubjectsSection from "@/components/SubjectsSection";
-import LearningHome from "@/components/LearningSection";
-import FeatureSection from "@/components/FeatureSection";
+import HeroSection from "@/components/sections/HeroSection";
+import CounterSection from "@/components/sections/CounterSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import SubjectsSection from "@/components/sections/SubjectsSection";
+import LearningHome from "@/components/sections/LearningSection";
+import FeatureSection from "@/components/sections/FeatureSection";
 
 const Home = () => {
   return (
