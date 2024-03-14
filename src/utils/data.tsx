@@ -1,3 +1,4 @@
+import { Feature } from "@/interfaces";
 import {
   FaFacebook,
   FaTwitter,
@@ -89,6 +90,18 @@ export const slidesData = [
     description:
       "توفر منصة اكاديمية إياد.كوم تخفيضات اسعار وعروض مختلفة تناسب الجميع على كل الدورات ولكل المراحل التعليمية.",
     imageSrc: "/images/hero-3.png",
+    isBooked: true,
+  },
+];
+
+export const slidesData2 = [
+  {
+    title:
+      "قم بتحديد أهداف تعلم طفلك وسنقوم بالاهتمــــــام بالأشيـــاء الباقية",
+    subTitle: "مرحباً بك في منصة اكاديمية إياد.كوم",
+    description:
+      "يقدم معلمينا و معلماتنا كل ما يحتاجه الطــــالب بإستخدام أحـــــدث أدوات التدريس لدينا ووضع خطة تدريبية مناسبة للارتقــاء بالمستــــوى الدراسي للطـــــلاب وتحسيـــن درجــــاتهم.",
+    imageSrc: "/images/hero-4.png",
     isBooked: true,
   },
 ];
@@ -204,5 +217,115 @@ export const socialMedia = [
     icon: <FaWhatsappSquare />,
     href: "https://whatsapp.com",
     color: "green",
+  },
+];
+
+export const features: Feature[] = [
+  {
+    id: 1,
+    imageUrl: "/images/features/feature-1.png",
+    title: "دورات تدريبية فردية عبر زوم",
+    description:
+      "دورات مباشرة تفاعلية لتنمية المهارات شاملة المحتوى لكافة الأعمار والمستويات.",
+  },
+  {
+    id: 2,
+    imageUrl: "/images/features/feature-2.png",
+    title: "أمهر المعلمين العرب والأجانب",
+    description:
+      "محــاضـرين عــــرب أو أجـــــانب Native speakers توفــــر لك التوجيـــــه والتقييم والتـــــدريب العملي و توفيــــــر تدريبــــــات مستمــرة",
+  },
+  {
+    id: 3,
+    imageUrl: "/images/features/feature-3.png",
+    title: "متابعة على مدار 24 ساعة",
+    description:
+      "تتيح لك أكاديمية إياد.كوم مرونة في اختيار وتحديد مواعيــــد صباحية / مسائية المناسبة لك.",
+  },
+  {
+    id: 4,
+    imageUrl: "/images/features/feature-4.png",
+    title: "أسعار تنافسية",
+    description:
+      "مــوقع المــــــدرسة دوت كــوم يقدم تخفيضات أسعــــار وعـــروض وباقات مختلفة تناسب الجميــــع.",
+  },
+];
+
+export const VideoLinks = [
+  {
+    id: 1,
+    href: "https://www.youtube.com/watch?v=OzaTtKMMIbs",
+    src: "/images/holder.jpg",
+    alt: "image 1",
+  },
+  {
+    id: 2,
+    href: "https://www.youtube.com/watch?v=8ySwA80U73I&t=7s",
+    src: "/images/holder.jpg",
+    alt: "image 2",
+  },
+  {
+    id: 3,
+    href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
+    src: "/images/holder.jpg",
+    alt: "image 3",
+  },
+  {
+    id: 4,
+    href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
+    src: "/images/holder.jpg",
+    alt: "image 4",
+  },
+  {
+    id: 5,
+    href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
+    src: "/images/holder.jpg",
+    alt: "image 5",
+  },
+
+  // Add more items as needed
+];
+
+export const courseFeatures1 = [
+  {
+    title: "دوراتنـــــا مصممة لك",
+    description:
+      "يتم توظيـــــف مدرس خصــوصي يملك من المهـــــارات ما يمكنه من التعامل مع كافة السمات الشخصية مما يضمن راحة طلابنا خــلال حصة الدرس.",
+    imgSrc: "/images/learning/learn-1.png",
+    imgAlt: "image",
+  },
+  {
+    title: "دورات فرديــة مع متابعة مستمــرة",
+    description:
+      "دورات تدريبيـــــة فرديـــــة وليست مجموعة مع وجـــود معلم متخصص يمكنك التواصـــل المبــــــــاشر معه بصــــورة شخصية يـــوفر لك الإجـــابـة على جميع أسئلتك",
+    imgSrc: "/images/learning/learn-2.png",
+    imgAlt: "image",
+  },
+];
+
+export const courseFeatures2 = [
+  {
+    id: 1,
+    title: "مساحة الدروس الافتراضية لدينا",
+    description:
+      "دورات اكاديميه اياد.كوم مليئة بالميزات التعاونية بما في ذلك السبورة البيضاء لجعل جميع الدروس تفاعلية، ومشاركة الملفات بحيث يكون الجميــــع على نفس الصفحة، و تسجيــــلات الدروس حتى تتمكن من مشاهدة أفضل الأجزاء مرة أخرى. ",
+    imgSrc: "/images/learning/learn-3.webp",
+    imgAlt: "image",
+  },
+  {
+    id: 2,
+    title: "التواصل المباشر مع المدرس",
+    description:
+      "حيث يمكن للطلاب والمعلمين مشاركة مهام الواجبات المنزلية أو الدردشة حــول جدولة الدروس أو تثبيت المحادثات المهمة للرجوع إليها بســرعة والمراجعة المستمرة.",
+    imgSrc: "/images/learning/learn-4.webp",
+    imgAlt: "image",
+  },
+  {
+    id: 3,
+    title: "دروس فردية في كل المواد",
+    description:
+      "دروس في كل المواد من تعلم الفيزيــاء إلى الرياضيــــات باستخدام أحدث الأساليب التعليميـــة، يتميز مدرسونا بإضافــــة الإبــــداع إلى دروسهم، لكي يُخرجوا أفضل ما عند الطــالب من تفوق، ممـــا يجعلهم في تقدم مستمر وتحمس للتعلم.",
+    imgSrc: "/images/learning/learn-5.webp",
+    imgAlt: "image",
   },
 ];
