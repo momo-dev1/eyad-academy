@@ -4,23 +4,17 @@ import Title from "../shared/SectionTitle";
 import Image from "next/image";
 import Button from "../shared/Button";
 
-const LearningHome = () => {
-  const courseFeatures = [
-    {
-      title: "دوراتنـــــا مصممة لك",
-      description:
-        "يتم توظيـــــف مدرس خصــوصي يملك من المهـــــارات ما يمكنه من التعامل مع كافة السمات الشخصية مما يضمن راحة طلابنا خــلال حصة الدرس.",
-      imgSrc: "/images/learning/learn-1.png",
-      imgAlt: "image",
-    },
-    {
-      title: "دورات فرديــة مع متابعة مستمــرة",
-      description:
-        "دورات تدريبيـــــة فرديـــــة وليست مجموعة مع وجـــود معلم متخصص يمكنك التواصـــل المبــــــــاشر معه بصــــورة شخصية يـــوفر لك الإجـــابـة على جميع أسئلتك",
-      imgSrc: "/images/learning/learn-2.png",
-      imgAlt: "image",
-    },
-  ];
+interface IProps {
+  features: {
+    title: string;
+    description: string;
+    imgSrc: string;
+    imgAlt: string;
+  }[];
+}
+const CourseFeatures = ({ features }: IProps) => {
+  // دروسنا الفردية التي تبلغ مدتها 60 دقيقة مخصصة لكل طالب، مع أكثر من ميزة:
+
   return (
     <section className="py-20 bg-white">
       <MaxWidthWrapper>
@@ -32,7 +26,7 @@ const LearningHome = () => {
           </p>
         </header>
         <ul className="p-4 space-y-10">
-          {courseFeatures.map((feature, index) => (
+          {features.map((feature, index) => (
             <li
               key={index}
               className={`flex flex-col ${
@@ -67,4 +61,4 @@ const LearningHome = () => {
   );
 };
 
-export default LearningHome;
+export default CourseFeatures;

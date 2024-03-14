@@ -6,11 +6,20 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import SlideContent from "../slider/SlideContent";
-import { slidesData } from "@/utils/data";
 
-const HeroSection = () => {
+interface IProps {
+  data: {
+    title: string;
+    subTitle: string;
+    description: string;
+    imageSrc: string;
+    isBooked: boolean;
+  }[];
+}
+
+const HeroSection = ({ data }: IProps) => {
   return (
-    <section className="bg-custom-gradient md:pt-24 pt-20">
+    <section className="bg-custom-gradient  pt-40">
       <MaxWidthWrapper>
         <div dir="rtl" className="slide-container">
           <Swiper
@@ -21,7 +30,7 @@ const HeroSection = () => {
             modules={[Autoplay, Pagination]}
             className="mySwiper"
           >
-            {slidesData.map((slide, index) => (
+            {data.map((slide, index) => (
               <SwiperSlide key={index} className={`slide-item-${index + 1}`}>
                 <SlideContent {...slide} />
               </SwiperSlide>

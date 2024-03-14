@@ -2,79 +2,7 @@ import Image from "next/image";
 import Button from "../shared/Button";
 import { FaPlayCircle } from "react-icons/fa";
 import Link from "next/link";
-
-interface Feature {
-  id: number;
-  imageUrl: string;
-  title: string;
-  description: string;
-}
-
-const features: Feature[] = [
-  {
-    id: 1,
-    imageUrl: "/images/features/feature-1.png",
-    title: "دورات تدريبية فردية عبر زوم",
-    description:
-      "دورات مباشرة تفاعلية لتنمية المهارات شاملة المحتوى لكافة الأعمار والمستويات.",
-  },
-  {
-    id: 2,
-    imageUrl: "/images/features/feature-2.png",
-    title: "أمهر المعلمين العرب والأجانب",
-    description:
-      "محــاضـرين عــــرب أو أجـــــانب Native speakers توفــــر لك التوجيـــــه والتقييم والتـــــدريب العملي و توفيــــــر تدريبــــــات مستمــرة",
-  },
-  {
-    id: 3,
-    imageUrl: "/images/features/feature-3.png",
-    title: "متابعة على مدار 24 ساعة",
-    description:
-      "تتيح لك أكاديمية إياد.كوم مرونة في اختيار وتحديد مواعيــــد صباحية / مسائية المناسبة لك.",
-  },
-  {
-    id: 4,
-    imageUrl: "/images/features/feature-4.png",
-    title: "أسعار تنافسية",
-    description:
-      "مــوقع المــــــدرسة دوت كــوم يقدم تخفيضات أسعــــار وعـــروض وباقات مختلفة تناسب الجميــــع.",
-  },
-];
-
-const VideoLinks = [
-  {
-    id: 1,
-    href: "https://www.youtube.com/watch?v=OzaTtKMMIbs",
-    src: "/images/holder.jpg",
-    alt: "image 1",
-  },
-  {
-    id: 2,
-    href: "https://www.youtube.com/watch?v=8ySwA80U73I&t=7s",
-    src: "/images/holder.jpg",
-    alt: "image 2",
-  },
-  {
-    id: 3,
-    href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
-    src: "/images/holder.jpg",
-    alt: "image 3",
-  },
-  {
-    id: 4,
-    href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
-    src: "/images/holder.jpg",
-    alt: "image 4",
-  },
-  {
-    id: 5,
-    href: "https://www.youtube.com/watch?v=kCg8v4mEh8g",
-    src: "/images/holder.jpg",
-    alt: "image 5",
-  },
-
-  // Add more items as needed
-];
+import { VideoLinks, features } from "@/utils/data";
 
 const FeatureSection = () => {
   return (
@@ -93,7 +21,7 @@ const FeatureSection = () => {
 
           <div>
             <ul className="space-y-5">
-              {features.map((feature) => (
+              {features.map((feature: any) => (
                 <li key={feature.id} className="flex items-center gap-4">
                   <div className="flex-shrink-0">
                     <Image

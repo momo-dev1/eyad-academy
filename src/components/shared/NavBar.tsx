@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
+import { FaGlobe, FaPhoneSquare } from "react-icons/fa";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import Link from "next/link";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -12,12 +14,23 @@ const NavBar = () => {
   };
 
   const navItems = [
-    { id: 1, text: "دوراتنا" },
-    { id: 2, text: "الإشتراك" },
-    { id: 3, text: "تواصل معنا " },
+    { id: 1, text: "دوراتنا", link: "/" },
+    { id: 2, text: "كيفية الاشتراك", link: "/enroll" },
+    { id: 3, text: "تواصل معنا ", link: "/" },
   ];
   return (
-    <div dir="rtl" className=" bg-nav z-50 fixed w-full shadow-md">
+    <nav dir="rtl" className=" bg-nav z-50 fixed w-full shadow-md">
+      <div className="py-6 px-2 bg-green-700 text-white">
+        <div className="max-w-5xl mx-auto flex justify-between">
+          <div className="flex items-center gap-1">
+            <FaPhoneSquare /> 123456789+
+          </div>
+          <div className="flex items-center gap-1">
+            English
+            <FaGlobe />
+          </div>
+        </div>
+      </div>
       <MaxWidthWrapper>
         <div className="flex justify-between items-center py-2 mx-auto px-4 text-[#444444] relative">
           {/* Logo */}
@@ -29,7 +42,7 @@ const NavBar = () => {
                 key={item.id}
                 className="p-4 hover:text-[#ffbe58] rounded-xl m-2 cursor-pointer duration-300"
               >
-                {item.text}
+                <Link href={item.link}> {item.text} </Link>
               </li>
             ))}
           </ul>
@@ -65,7 +78,7 @@ const NavBar = () => {
           ))}
         </ul>
       </MaxWidthWrapper>
-    </div>
+    </nav>
   );
 };
 
